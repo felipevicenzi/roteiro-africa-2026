@@ -1,0 +1,1 @@
+# roteiro-africa-2026
