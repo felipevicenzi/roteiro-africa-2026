@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#17241d" />
+  <title>África do Sul 2026 • Felipe & Gui</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav shell">
+      <a class="brand" href="#inicio">África 2026</a>
+      <div class="navlinks">
+        <a href="#roteiro">Roteiro</a><a href="#reservas">Reservas</a><a href="#custos">Custos</a><a href="#pendencias">Pendências</a>
+      </div>
+    </nav>
+    <div class="shell hero-content" id="inicio">
+      <p class="eyebrow">Felipe & Gui • 16 de setembro a 2 de outubro</p>
+      <h1>África do Sul<br><em>em 17 dias</em></h1>
+      <p class="subtitle">Joanesburgo, Kruger, Cape Town, Stellenbosch e um stopover em Luanda.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#roteiro">Ver roteiro</a>
+        <button class="button ghost" id="togglePending">Mostrar só pendências</button>
+      </div>
+      <div class="stats" id="stats"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="shell section overview">
+      <div>
+        <p class="kicker">Visão geral</p>
+        <h2>Da cidade ao safári,<br>do vinho ao Atlântico.</h2>
+      </div>
+      <div class="route-line" id="routeLine"></div>
+    </section>
+
+    <section class="section itinerary-section" id="roteiro">
+      <div class="shell">
+        <div class="section-heading">
+          <div><p class="kicker">Dia a dia</p><h2>Roteiro da viagem</h2></div>
+          <div class="legend"><span><i class="dot confirmed"></i>Confirmado</span><span><i class="dot planned"></i>Planejado</span><span><i class="dot pending"></i>A definir</span></div>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <section class="shell section" id="reservas">
+      <div class="section-heading"><div><p class="kicker">Logística</p><h2>Reservas</h2></div></div>
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="flights">Voos</button>
+        <button class="tab" data-tab="stays">Hospedagens</button>
+      </div>
+      <div id="reservations"></div>
+    </section>
+
+    <section class="cost-section" id="custos">
+      <div class="shell section">
+        <div class="section-heading light"><div><p class="kicker">Orçamento atual</p><h2>Custos registrados</h2></div></div>
+        <div class="cost-grid" id="costGrid"></div>
+        <p class="cost-note">Valores importados da planilha. Itens ainda não lançados permanecem zerados e não representam o custo final da viagem.</p>
+      </div>
+    </section>
+
+    <section class="shell section" id="pendencias">
+      <div class="section-heading"><div><p class="kicker">Próximos passos</p><h2>O que falta decidir</h2></div><span class="count" id="pendingCount"></span></div>
+      <div class="pending-grid" id="pendingGrid"></div>
+    </section>
+  </main>
+
+  <footer><div class="shell">Roteiro África do Sul 2026 • versão inicial baseada na planilha de viagem</div></footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
